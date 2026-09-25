@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TokLiveCounter - Live TikTok Follower Count</title>
 <style>
-body{margin:0;font-family:Arial, sans-serif;background:#000;color:#fff;text-align:center}
+body{margin:0;font-family:Arial,sans-serif;background:#000;color:#fff;text-align:center}
 .header{padding:20px;background:#111}
 .header h1{color:#25F4EE;margin:0}
 .header span{color:#FE2C55}
 .search{margin:30px auto;max-width:400px;display:flex;gap:10px;padding:0 20px}
-.search input{flex:1;padding:15px;border-radius:30px;border:2px solid #333;background:#111;color:#fff;outline:none;font-size:16px}
-.search button{padding:15px 25px;border-radius:30px;border:none;background:linear-gradient(90deg,#25F4EE,#FE2C55);color:#fff;font-weight:bold;cursor:pointer}
-.card{max-width:400px;margin:20px auto;background:#111;border:2px solid #222;border-radius:20px;padding:30px}
+.search input{flex:1;padding:15px;border-radius:30px;border:2px solid #333;background:#111;color:#fff;outline:none}
+.search button{padding:15px 25px;border-radius:30px;border:none;background:linear-gradient(90deg,#25F4EE,#FE2C55);color:#fff;cursor:pointer}
+.card{max-width:400px;margin:20px auto;background:#111;border:2px solid #222;border-radius:20px;padding:20px}
 .avatar{width:100px;height:100px;border-radius:50%;background:#222;margin:0 auto 15px;border:3px solid #FE2C55}
 .count{font-size:60px;font-weight:900;margin:10px 0}
 .username{color:#25F4EE;font-size:20px}
@@ -28,7 +28,7 @@ body{margin:0;font-family:Arial, sans-serif;background:#000;color:#fff;text-alig
 </div>
 <div class="card">
 <div class="avatar"></div>
-<div class="username" id="showName">@username</div>
+<div class="username" id="showName">Username</div>
 <div class="live">● LIVE</div>
 <div class="count" id="count">0</div>
 <p>Followers</p>
@@ -36,23 +36,31 @@ body{margin:0;font-family:Arial, sans-serif;background:#000;color:#fff;text-alig
 <script>
 let interval;
 function startCount(){
- let name=document.getElementById('userInput').value || 'username';
- document.getElementById('showName').innerText='@'+name;
- let c=Math.floor(Math.random()*9000000)+100000;
- clearInterval(interval);
- interval=setInterval(()=>{
-   c+=Math.floor(Math.random()*10)-2;
-   document.getElementById('count').innerText=c.toLocaleString();
- },800);
+let name=document.getElementById('userInput').value || 'username'
+document.getElementById('showName').innerText='@'+name
+let c=Math.floor(Math.random()*9000000)+100000
+clearInterval(interval)
+interval=setInterval(()=>{
+c+=Math.floor(Math.random()*10)-2
+document.getElementById('count').innerText=c.toLocaleString()
+},800)
 }
 startCount();
 </script>
- <footer style="text-align:center;padding:20px;margin-top:30px;background:#f1f1f1;">
-<a href="about.html">About</a> | 
-<a href="contact.html">Contact</a> | 
-<a href="privacy-policy.html">Privacy Policy</a> | 
-<a href="disclaimer.html">Disclaimer</a>
+
+<div style="text-align:center;margin:40px 20px;padding:20px;background:#111;border-radius:10px;">
+<h2>📚 Latest Blog Posts</h2>
+<p><a href="how-to-grow-tiktok-followers.html" style="color:#25F4EE;">1. How to Grow TikTok Followers in 2026</a></p>
+<p><a href="what-is-tiktok-live-counter.html" style="color:#25F4EE;">2. What is Live Counter & How it Works?</a></p>
+<p><a href="tiktok-follower-mistakes.html" style="color:#25F4EE;">3. 5 Mistakes Stopping Your Growth</a></p>
+</div>
+
+<footer style="text-align:center;padding:20px;margin-top:30px;background:#111;color:#fff;border-top:1px solid #222;">
+<a href="about.html" style="color:#25F4EE;">About</a> | 
+<a href="contact.html" style="color:#25F4EE;">Contact</a> | 
+<a href="privacy-policy.html" style="color:#25F4EE;">Privacy Policy</a> | 
+<a href="disclaimer.html" style="color:#25F4EE;">Disclaimer</a>
 <p>© 2026 TokLiveCounter</p>
 </footer>
 </body>
-</html>
+ </html>
